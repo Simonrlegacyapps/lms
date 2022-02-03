@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import ContactForm from '../components/Contact/ContactForm';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import GoogleMap from '../components/Contact/GoogleMap';
 
 const Contact = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Contact" 
                 homePageUrl="/" 
@@ -62,7 +62,7 @@ const Contact = () => {
 
             <GoogleMap />
      
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

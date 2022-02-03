@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
 import SubscribeForm from '../components/Common/SubscribeForm';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 
 const Categories = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Categories" 
                 homePageUrl="/" 
@@ -159,7 +159,7 @@ const Categories = () => {
 
             <SubscribeForm />
       
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

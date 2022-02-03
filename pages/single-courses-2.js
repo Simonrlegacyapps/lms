@@ -1,15 +1,12 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
-import PageBanner from '../components/SingleCoursesTwo/PageBanner';
-import YouMightLikeTheCourses from '../components/Courses/YouMightLikeTheCourses';
-import CoursesDetailsSidebar from '../components/SingleCoursesTwo/CoursesDetailsSidebar';
-import Footer from '../components/_App/Footer';
+import PageBanner from '@/components/SingleCoursesTwo/PageBanner';
+import YouMightLikeTheCourses from '@/components/Courses/YouMightLikeTheCourses';
+import CoursesDetailsSidebar from '@/components/SingleCoursesTwo/CoursesDetailsSidebar';
 import Link from 'next/link';
 
 const SingleCourses = () => {
     return (
         <React.Fragment>
-            <Navbar />
             <PageBanner 
                 pageTitle="Python for Finance: Investment Fundamentals & Data Analytics" 
                 homePageUrl="/" 
@@ -441,8 +438,6 @@ const SingleCourses = () => {
             </div>
  
             <YouMightLikeTheCourses />
-
-            <Footer />
         </React.Fragment>
     )
 }

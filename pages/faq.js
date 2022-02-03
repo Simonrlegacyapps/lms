@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import {
     Accordion,
     AccordionItem,
@@ -17,7 +17,7 @@ resetIdCounter();
 const Faq = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Frequently Asked Questions" 
                 homePageUrl="/" 
@@ -348,7 +348,7 @@ const Faq = () => {
 
             <SubscribeForm />
      
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

@@ -129,6 +129,14 @@ p:last-child {
   background-color: #f8f9f8;
 }
 
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+}
+
 .d-table {
   width: 100%;
   height: 100%;
@@ -213,6 +221,26 @@ p:last-child {
   margin-bottom: 100px;
 }
 
+.mxw-200 {
+  max-width: 200px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mr-05 {
+  margin-right: 5px;
+}
+
 a {
   color: #221638;
   -webkit-transition: 0.5s;
@@ -229,8 +257,25 @@ a:hover {
   font-family: "Playfair Display", serif;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+.text-right {
+  text-align: center;
+}
+
+.vertical-align-top td, .vertical-align-top th {
+  vertical-align: middle;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* section-title */
@@ -468,7 +513,7 @@ Navbar Area CSS
 .edemy-nav .navbar .search-box {
   margin-left: 50px;
   position: relative;
-  width: 270px;
+  width: 260px;
   border-radius: 5px;
 }
 
@@ -809,7 +854,7 @@ Navbar Area CSS
 }
 
 .edemy-nav .navbar .navbar-nav .nav-item.megamenu .dropdown-menu {
-  width: 100%;
+  width: 100% !important;
   top: auto;
   left: 0;
   margin-top: 0;
@@ -942,6 +987,62 @@ Navbar Area CSS
   color: #fe4a55;
 }
 
+.edemy-nav .navbar .others-option .user-dropdown {
+  position: relative;
+}
+
+.edemy-nav .navbar .others-option .user-dropdown .dropdown-menu {
+  border: none;
+  top: 58px;
+  left: auto;
+  right: 0;
+  z-index: 99;
+  opacity: 0;
+  width: 250px;
+  display: block;
+  border-radius: 0;
+  padding: 10px 0;
+  margin-top: 15px;
+  position: absolute;
+  visibility: hidden;
+  background: #ffffff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-top: 3px solid #fe4a55;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.edemy-nav .navbar .others-option .user-dropdown .dropdown-menu li a {
+  padding: 8px 20px;
+  margin: 0;
+  position: relative;
+  display: block;
+  color: #221638;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.edemy-nav .navbar .others-option .user-dropdown .dropdown-menu li a i {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+}
+
+.edemy-nav .navbar .others-option .user-dropdown .dropdown-menu li a:hover, .edemy-nav .navbar .others-option .user-dropdown .dropdown-menu li a:focus, .edemy-nav .navbar .others-option .user-dropdown .dropdown-menu li a.active {
+  color: #fe4a55;
+}
+
+.edemy-nav .navbar .others-option .user-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 9px;
+}
+
 .navbar-area {
   position: relative;
   background-color: #ffffff;
@@ -971,6 +1072,11 @@ Navbar Area CSS
   border: none;
   border-radius: 0;
   padding: 0;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .navbar-toggler .icon-bar {
@@ -3378,6 +3484,9 @@ Kindergarten Services Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-left: 2px !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
 }
 
 .services-slides.owl-theme .owl-nav [class*=owl-]::before {
@@ -3587,7 +3696,6 @@ Kindergarten Courses Area CSS
   font-size: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 0;
   padding-left: 3px !important;
 }
 
@@ -4891,6 +4999,7 @@ Courses Details Area CSS
   position: absolute;
   left: 0;
   top: 0;
+  cursor: pointer;
 }
 
 .courses-details-info .image .content {
@@ -4997,6 +5106,7 @@ Courses Details Area CSS
 
 .courses-details-info .btn-box .default-btn {
   display: block;
+  width: 100%;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 12px;
@@ -10632,7 +10742,6 @@ View All Courses Area CSS
 .view-all-courses-image {
   margin-left: -270px;
   text-align: center;
-  position: relative;
 }
 
 .view-all-courses-image img {
@@ -11275,20 +11384,9 @@ Teacher Register Area CSS
   transition: 0.5s;
 }
 
-.teacher-register-box form input:focus::-webkit-input-placeholder, .teacher-register-box form textarea:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.teacher-register-box form input:focus:-ms-input-placeholder, .teacher-register-box form textarea:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.teacher-register-box form input:focus::-ms-input-placeholder, .teacher-register-box form textarea:focus::-ms-input-placeholder {
-  color: transparent;
-}
-
-.teacher-register-box form input:focus::placeholder, .teacher-register-box form textarea:focus::placeholder {
-  color: transparent;
+.teacher-register-box form .form-control:focus {
+  background-color: #c22b34;
+  color: #fff;
 }
 
 .teacher-register-box form textarea {
@@ -11629,6 +11727,10 @@ Download Syllabus Area CSS
 
 .download-syllabus-form form {
   margin-top: 25px;
+}
+
+.download-syllabus-form form .form-group {
+  margin-bottom: 20px;
 }
 
 .download-syllabus-form form .form-group .form-control {
@@ -15340,6 +15442,10 @@ Contact Area CSS
   margin-top: 25px;
 }
 
+.contact-form form .form-group {
+  margin-bottom: 20px;
+}
+
 .contact-form form input, .contact-form form textarea {
   display: block;
   width: 100%;
@@ -15609,7 +15715,7 @@ Footer Area CSS
 .footer-bottom-area ul li::before {
   content: '';
   position: absolute;
-  right: -11px;
+  right: -12px;
   top: 5.5px;
   width: 1px;
   height: 14px;
@@ -15750,5 +15856,696 @@ Go Top CSS
   transition: 0.5s;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+.td-sidebar {
+  background-color: #f8f9f8;
+  border-top: 3px solid #fe4a55;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.td-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.td-sidebar ul li {
+  border-bottom: 1px solid #f1f1f1;
+  margin-top: -1px;
+}
+
+.td-sidebar ul li:last-child {
+  border-bottom: none;
+}
+
+.td-sidebar ul li a {
+  padding: 15px 20px;
+  display: block;
+}
+
+.td-sidebar ul li a.active, .td-sidebar ul li a:hover {
+  background-color: #fe4a55;
+  color: #ffffff;
+}
+
+.td-text-area h1, .td-text-area h2, .td-text-area h3, .td-text-area h4, .td-text-area h5, .td-text-area h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.td-text-area ul, .td-text-area ol {
+  padding-left: 17px;
+}
+
+.td-text-area ul li, .td-text-area ol li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.border-box {
+  border: 1px solid #f5f5f5;
+  padding: 30px;
+  position: relative;
+}
+
+button .spinner-border {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+}
+
+.loading-spinner {
+  margin: auto;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .7;
+  z-index: 990;
+  text-align: center;
+}
+
+.loading-spinner .spinner-border {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -2px;
+}
+
+.table .btn {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.empty-content {
+  background-color: #f5f5f5;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Course video list */
+.course-video-list {
+  height: 600px;
+  overflow-y: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.course-video-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.course-video-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.course-video-list::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.course-video-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.course-video-list a {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.course-video-list a:last-child {
+  margin-bottom: 0;
+}
+
+.course-video-list a h4 {
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  margin: 0;
+  width: 100%;
+  font-size: 15px;
+  padding: 45px 15px 10px 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.course-video-list a h4:hover {
+  color: #fe4a55;
+}
+
+.course-video-iframe {
+  position: relative;
+}
+
+.course-video-iframe iframe {
+  height: 600px;
+  width: 100%;
+  border: 5px solid #eee;
+  border-radius: 10px;
+}
+
+.course-video-iframe video {
+  height: 600px;
+  width: 100%;
+  border: 5px solid #eee;
+  border-radius: 10px;
+}
+
+.course-video-iframe .prev, .course-video-iframe .next {
+  background-color: #fe4a55;
+  border: 1px solid #fe4a55;
+  padding: 0;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 38px;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: -10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.course-video-iframe .next {
+  left: auto;
+  right: -10px;
+}
+
+.course-video-iframe:hover .prev, .course-video-iframe:hover .next {
+  opacity: 1;
+}
+
+/* User Profile */
+.user-profile {
+  text-align: center;
+}
+
+.user-profile img {
+  margin-bottom: 20px;
+}
+
+.user-profile h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.user-profile p {
+  margin: 0;
+}
+
+/*new-css*/
+.bg-fff8f8 {
+  background-color: #fff8f8;
+}
+
+.bg-f9fbff {
+  background-color: #f9fbff;
+}
+
+/*================================================
+Features Area CSS
+=================================================*/
+.features-box {
+  z-index: 1;
+  padding: 35px;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #ffffff;
+}
+
+.features-box .icon {
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.features-box h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.features-box p {
+  margin-bottom: 12px;
+}
+
+.features-box .link-btn {
+  display: inline-block;
+  color: #fe4a55;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.features-box .link-btn:hover {
+  color: #221638;
+}
+
+.features-box .back-icon {
+  top: 20px;
+  right: 20px;
+  opacity: .05;
+  line-height: 1;
+  font-size: 120px;
+  position: absolute;
+}
+
+.features-box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+/*================================================
+Main Banner Area CSS
+=================================================*/
+.main-banner-area {
+  z-index: 1;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.main-banner-area .container-fluid {
+  max-width: 1395px;
+}
+
+.main-banner-area .banner-shape1 {
+  left: auto;
+  bottom: 10%;
+  right: 17%;
+  width: 190px;
+}
+
+.main-banner-area .banner-shape2 {
+  width: 50px;
+  left: 29%;
+  top: 9%;
+}
+
+.main-banner-area .banner-shape3 {
+  right: auto;
+  width: 50px;
+  left: 30%;
+  top: 5%;
+}
+
+.main-banner-content-style-two h1 {
+  margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.main-banner-content-style-two p {
+  max-width: 580px;
+  line-height: 1.8;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.main-banner-content-style-two .default-btn {
+  margin-top: 10px;
+}
+
+.bulb {
+  left: 15%;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.bulb img {
+  -webkit-animation: moveleftbounce 4s linear infinite;
+          animation: moveleftbounce 4s linear infinite;
+}
+
+/*================================================
+About Area CSS
+=================================================*/
+.about-area .bulb {
+  left: auto;
+  right: 50px;
+  width: 280px;
+}
+
+/*================================================
+View All Courses Area CSS
+=================================================*/
+.view-all-courses-area-three {
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.view-all-courses-area-three .bulb {
+  left: auto;
+  right: 50px;
+}
+
+.view-all-courses-content-style-two .sub-title {
+  display: block;
+  text-transform: uppercase;
+  color: #fe4a55;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.view-all-courses-content-style-two h2 {
+  margin-bottom: 0;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.view-all-courses-content-style-two p {
+  margin-top: 15px;
+}
+
+.view-all-courses-content-style-two .default-btn {
+  margin-top: 10px;
+}
+
+.view-all-courses-image-style-two {
+  margin-left: 30px;
+}
+
+/*================================================
+Premium Access Area CSS
+=================================================*/
+.premium-access-area-two {
+  z-index: 1;
+  padding-top: 30px;
+  position: relative;
+}
+
+.premium-access-area-two::before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  z-index: -1;
+  height: 35px;
+  position: absolute;
+  background-color: #100f1f;
+}
+
+.premium-access-content-style-two {
+  position: relative;
+  top: -20px;
+}
+
+.premium-access-content-style-two .sub-title {
+  display: block;
+  text-transform: uppercase;
+  color: #fe4a55;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.premium-access-content-style-two h2 {
+  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.premium-access-content-style-two .default-btn {
+  margin-top: 10px;
+}
+
+.premium-access-image-style-two {
+  text-align: center;
+}
+
+/*================================================
+Testimonials Area CSS
+=================================================*/
+.testimonials-slides-two {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-slides-two.owl-theme .owl-nav {
+  margin-top: 0;
+}
+
+.testimonials-slides-two.owl-theme .owl-nav [class*=owl-] {
+  left: -20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff !important;
+  width: 40px;
+  color: #fe4a55;
+  border: 1px solid #fe4a55;
+  height: 40px;
+  font-size: 25px !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+
+.testimonials-slides-two.owl-theme .owl-nav [class*=owl-] i {
+  left: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.testimonials-slides-two.owl-theme .owl-nav [class*=owl-]:hover {
+  background-color: #fe4a55 !important;
+  color: #ffffff;
+}
+
+.testimonials-slides-two.owl-theme .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: -20px;
+}
+
+.testimonials-item {
+  z-index: 1;
+  padding: 100px;
+  background-color: #FFF8F8;
+  border-radius: 5px;
+  position: relative;
+}
+
+.testimonials-item p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.testimonials-item h3 {
+  color: #fe4a55;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testimonials-item span {
+  display: block;
+  color: #606060;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.testimonials-item img {
+  display: inline-block !important;
+  width: auto !important;
+  text-align: center;
+}
+
+.testimonials-item::before {
+  opacity: .04;
+  content: "\f10a";
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+  line-height: 1;
+  font-family: Flaticon;
+  font-size: 200px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+/*================================================
+Get Instant Courses Area CSS
+=================================================*/
+.get-instant-courses-area-two {
+  position: relative;
+  z-index: 1;
+}
+
+.get-instant-courses-area-two::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 25px;
+  z-index: -1;
+  background-color: #ffffff;
+}
+
+.get-instant-courses-area-two::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 21px;
+  z-index: -1;
+  background-color: #ffffff;
+}
+
+.get-instant-courses-area-two .bulb {
+  left: 20px;
+  width: 180px;
+  bottom: 21px;
+}
+
+.get-instant-courses-content-style-two .sub-title {
+  display: block;
+  color: #fe4a55;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.get-instant-courses-content-style-two h2 {
+  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.get-instant-courses-content-style-two p {
+  max-width: 620px;
+  line-height: 1.8;
+}
+
+.get-instant-courses-content-style-two .default-btn {
+  margin-top: 5px;
+}
+
+.get-instant-courses-image-style-two {
+  text-align: right;
+}
+
+/*================================================
+Partner Area CSS
+=================================================*/
+.partner-item {
+  text-align: center;
+}
+
+.partner-item img {
+  width: auto !important;
+  display: inline-block !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: .60;
+}
+
+.partner-item:hover img {
+  opacity: 1;
+}
+
+/*================================================
+Video Area CSS
+=================================================*/
+.video-area {
+  z-index: 1;
+  position: relative;
+}
+
+.video-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  z-index: -1;
+  background-color: #FFF8F8;
+}
+
+/*================================================
+Funfacts Area CSS
+=================================================*/
+.funfacts-box {
+  background-color: #ffffff;
+  border: 1px dashed #AD8360;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  height: 280px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.funfacts-box h3 {
+  margin-bottom: 8px;
+  color: #fe4a55;
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.funfacts-box h3 span {
+  font-size: 48px;
+}
+
+.funfacts-box h3 .odometer {
+  position: relative;
+  top: -2px;
+}
+
+.funfacts-box p {
+  text-transform: uppercase;
+  color: #221638;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.funfacts-box .content {
+  left: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 /*# sourceMappingURL=style.css.map */

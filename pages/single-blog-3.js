@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import BlogSidebar from '../components/Blog/BlogSidebar';
 import CommentArea from '../components/Blog/CommentForm';
 import dynamic from 'next/dynamic';
@@ -32,7 +32,7 @@ const BlogDetails = () => {
 
     return (
         <React.Fragment> 
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Blog Details" 
                 homePageUrl="/" 
@@ -226,7 +226,7 @@ const BlogDetails = () => {
                 </div>
             </div>
        
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

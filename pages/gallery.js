@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import SubscribeForm from '../components/Common/SubscribeForm';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import Lightbox from 'react-image-lightbox';
 import Link from 'next/link';
 
@@ -25,7 +25,7 @@ const Gallery = () => {
 
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Gallery" 
                 homePageUrl="/" 
@@ -174,7 +174,7 @@ const Gallery = () => {
 
             <SubscribeForm />
       
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

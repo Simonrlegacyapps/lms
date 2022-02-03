@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 
 const CoursesGrid02 = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Courses Grid 02" 
                 homePageUrl="/" 
@@ -495,7 +495,7 @@ const CoursesGrid02 = () => {
                 </div>
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

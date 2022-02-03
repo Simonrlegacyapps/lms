@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 
 const Checkout = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Checkout" 
                 homePageUrl="/" 
@@ -247,7 +247,7 @@ const Checkout = () => {
                 </div>
             </div>
         
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

@@ -1,14 +1,13 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
-
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import Link from 'next/link';
 
 const CoursesList01 = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Courses List 01" 
                 homePageUrl="/" 
@@ -462,7 +461,7 @@ const CoursesList01 = () => {
                 </div>
             </div>
      
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

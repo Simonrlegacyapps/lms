@@ -1,15 +1,14 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
- 
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import ProductsDetailsTabs from '../components/SingleProducts/ProductsDetailsTabs';
 import RelatedProducts from '../components/SingleProducts/RelatedProducts';
 
 const SingleProducts = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Products Details" 
                 homePageUrl="/" 
@@ -90,7 +89,7 @@ const SingleProducts = () => {
 
             <RelatedProducts />
   
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

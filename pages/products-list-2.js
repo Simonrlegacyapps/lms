@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import ShopSidebar from '../components/Shop/ShopSidebar';
 
 const Shop = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Shop" 
                 homePageUrl="/" 
@@ -335,7 +335,7 @@ const Shop = () => {
                 </div>
             </div>
       
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

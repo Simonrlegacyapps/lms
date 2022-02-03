@@ -1,16 +1,16 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import PremiumAccessTwo from '../components/Common/PremiumAccessTwo';
 import FunFactsThree from '../components/Common/FunFactsThree';
 import ApplyAsInstructor from '../components/BecomeATeacher/ApplyAsInstructor';
 import RegisterForm from '../components/BecomeATeacher/RegisterForm';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 
-const BecomeATeacher = () => {
+const BecomeATeacher = ({ user }) => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Become A Teacher" 
                 homePageUrl="/" 
@@ -26,9 +26,9 @@ const BecomeATeacher = () => {
 
             <ApplyAsInstructor />
 
-            <RegisterForm />
+            <RegisterForm user={user} />
      
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

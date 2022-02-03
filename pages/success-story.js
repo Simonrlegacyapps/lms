@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import IntroVideo from '../components/SuccessStory/IntroVideo';
 import SuccessfulStudents from '../components/SuccessStory/SuccessfulStudents';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import Link from 'next/link';
 
 const SuccessStory = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Success Story" 
                 homePageUrl="/" 
@@ -102,7 +102,7 @@ const SuccessStory = () => {
  
             <SuccessfulStudents />
             
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

@@ -132,6 +132,12 @@ p {
 .bg-f8f9f8 {
     background-color: #f8f9f8;
 }
+.form-group {
+    margin-bottom: 20px;
+    label {
+        margin-bottom: 8px;
+    }
+}
 .d-table {
     width: 100%;
     height: 100%;
@@ -203,6 +209,21 @@ p {
         bottom: 100px;
     };
 }
+.mxw-200 {
+    max-width: 200px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mr-05 {
+    margin-right: 5px;
+}
 a {
     color: $black-color;
     transition: $transition;
@@ -216,8 +237,23 @@ a {
 .playfair-display-font {
     font-family: $font-family2;
 }
-.form-group {
-    margin-bottom: 20px;
+.d-table {
+    width: 100%;
+    height: 100%;
+}
+.d-table-cell {
+    vertical-align: middle;
+}
+.text-right {
+    text-align: center;
+}
+.vertical-align-top {
+    td, th {
+        vertical-align: middle;
+    }
+}
+.text-center {
+    text-align: center;
 }
 
 /* section-title */
@@ -425,7 +461,7 @@ Navbar Area CSS
         .search-box {
             margin-left: 50px;
             position: relative;
-            width: 270px;
+            width: 260px;
             border-radius: 5px;
 
             .input-search {
@@ -749,7 +785,7 @@ Navbar Area CSS
                         justify-content: unset;
                     }
                     .dropdown-menu {
-                        width: 100%;
+                        width: 100% !important;
                         top: auto;
                         left: 0;
                         margin-top: 0;
@@ -888,6 +924,61 @@ Navbar Area CSS
                     }
                 }
             }
+
+            .user-dropdown {
+                position: relative;
+                .dropdown-menu {
+                    border: none;
+                    top: 58px;
+                    left: auto;
+                    right: 0;
+                    z-index: 99;
+                    opacity: 0;
+                    width: 250px;
+                    display: block;
+                    border-radius: 0;
+                    padding: 10px 0;
+                    margin-top: 15px;
+                    position: absolute;
+                    visibility: hidden;
+                    background: $white-color;
+                    transition: all 0.2s ease-in-out;
+                    border-top: 3px solid $main-color;
+                    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+
+                    li {
+                        a {
+                            padding: 8px 20px;
+                            margin: 0;
+                            position: relative;
+                            display: block;
+                            color: $black-color;
+                            font: {
+                                size: 16px;
+                                weight: 700;
+                            };
+                            i {
+                                margin: 0;
+                                position: absolute;
+                                top: 50%;
+                                font-size: 20px;
+                                transform: translateY(-50%);
+                                right: 15px;
+                            }
+                            &:hover, &:focus, &.active {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .dropdown-menu {
+                        opacity: 1;
+                        visibility: visible;
+                        margin-top: 9px;
+                    }
+                }
+            }
         }
     }
 }
@@ -919,6 +1010,10 @@ Navbar Area CSS
     border: none;
 	border-radius: 0;
 	padding: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
 
     .icon-bar {
         width: 35px;
@@ -3129,6 +3224,9 @@ Kindergarten Services Area CSS
                 font-size: 20px;
                 transition: $transition;
                 padding-left: 2px !important;
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-right: 0;
 
                 &::before {
                     position: absolute;
@@ -3350,7 +3448,6 @@ Kindergarten Courses Area CSS
                 color: #d1a1a1;
                 font-size: 20px;
                 transition: $transition;
-                padding: 0;
                 padding-left: 3px !important;
 
                 &::before {
@@ -4668,6 +4765,7 @@ Courses Details Area CSS
             position: absolute;
             left: 0;
             top: 0;
+            cursor: pointer;
         }
         .content {
             position: absolute;
@@ -4778,6 +4876,7 @@ Courses Details Area CSS
         };
         .default-btn {
             display: block;
+            width: 100%;
             padding: {
                 right: 30px;
                 left: 30px;
@@ -10449,7 +10548,6 @@ View All Courses Area CSS
 .view-all-courses-image {
     margin-left: -270px;
     text-align: center;
-    position: relative;
 
     img {
         width: 100%;
@@ -11040,10 +11138,11 @@ Teacher Register Area CSS
                 color: #cdcdcd;
                 transition: $transition;
             }
+        }
+        .form-control {
             &:focus {
-                &::placeholder {
-                    color: transparent;
-                }
+                background-color: #c22b34;
+                color: #fff;
             }
         }
         textarea {
@@ -11380,6 +11479,7 @@ Download Syllabus Area CSS
         margin-top: 25px;
 
         .form-group {
+            margin-bottom: 20px;
             .form-control {
                 background-color: #447b6b;
                 color: $white-color;
@@ -15020,6 +15120,9 @@ Contact Area CSS
     form {
         margin-top: 25px;
 
+        .form-group {
+            margin-bottom: 20px;
+        }
         input, textarea {
             display: block;
             width: 100%;
@@ -15244,7 +15347,7 @@ Footer Area CSS
             &::before {
                 content: '';
                 position: absolute;
-                right: -11px;
+                right: -12px;
                 top: 5.5px;
                 width: 1px;
                 height: 14px;
@@ -15361,5 +15464,678 @@ Go Top CSS
         color: $white-color;
         transition: $transition;
         transform: translateY(-10px);
+    }
+}
+
+// Teacher Dashboard
+.td-sidebar {
+    background-color: #f8f9f8;
+    border-top: 3px solid $main-color;
+    border-radius: 3px 3px 0px 0px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            border-bottom: 1px solid #f1f1f1;
+            margin-top: -1px;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                padding: 15px 20px;
+                display: block;
+
+                &.active, &:hover {
+                    background-color: $main-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+.td-text-area {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    ul, ol {
+        padding-left: 17px;
+        li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+    }
+}
+
+.border-box {
+    border: 1px solid #f5f5f5;
+    padding: 30px;
+    position: relative;
+}
+
+button {
+    .spinner-border {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: -2px;
+        margin-left: 10px;
+    }
+}
+.loading-spinner {
+    margin: auto;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .7;
+    z-index: 990;
+    text-align: center;
+
+    .spinner-border {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: -2px;
+    }
+}
+.table {
+    .btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+.empty-content {
+    background-color: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Course video list */
+.course-video-list {
+    height: 600px;
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+
+    a {
+        display: block;
+        position: relative;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            position: absolute;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            margin: 0;
+            width: 100%;
+            font-size: 15px;
+            padding: 45px 15px 10px 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+.course-video-iframe {
+    position: relative;
+
+    iframe {
+        height: 600px;
+        width: 100%;
+        border: 5px solid #eee;
+        border-radius: 10px;
+    }
+
+    video {
+        height: 600px;
+        width: 100%;
+        border: 5px solid #eee;
+        border-radius: 10px;
+    }
+ 
+    .prev, .next {
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        padding: 0;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        line-height: 38px;
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: $transition;
+        z-index: 999;
+    }
+    .next {
+        left: auto;
+        right: -10px;
+    }
+
+    &:hover {
+        .prev, .next {
+            opacity: 1;
+        }
+    }
+}
+
+/* User Profile */
+.user-profile {
+    text-align: center;
+    img {
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    p {
+        margin: 0; 
+    }
+}
+
+/*new-css*/
+.bg-fff8f8 {
+    background-color: #fff8f8;
+}
+.bg-f9fbff {
+    background-color: #f9fbff;
+}
+
+/*================================================
+Features Area CSS
+=================================================*/
+.features-box {
+    z-index: 1;
+    padding: 35px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: $transition;
+    background-color: $white-color;
+
+    .icon {
+        font-size: 50px;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    h3 {
+        margin-bottom: 15px;
+        font: {
+            size: 22px;
+            weight: 800;
+        };
+    }
+    p {
+        margin-bottom: 12px;
+    }
+    .link-btn {
+        display: inline-block;
+        color: $main-color;
+        font: {
+            size: 15px;
+            weight: 700;
+        };
+        &:hover {
+            color: $black-color;
+        }
+    }
+    .back-icon {
+        top: 20px;
+        right: 20px;
+        opacity: .05;
+        line-height: 1;
+        font-size: 120px;
+        position: absolute;
+    }
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/*================================================
+Main Banner Area CSS
+=================================================*/
+.main-banner-area {
+    z-index: 1;
+    position: relative;
+    padding: {
+        top: 80px;
+        bottom: 100px;
+    };
+    .container-fluid {
+        max-width: 1395px;
+    }
+    .banner-shape1 {
+        left: auto;
+        bottom: 10%;
+        right: 17%;
+        width: 190px;
+    }
+    .banner-shape2 {
+        width: 50px;
+        left: 29%;
+        top: 9%;
+    }
+    .banner-shape3 {
+        right: auto;
+        width: 50px;
+        left: 30%;
+        top: 5%;
+    }
+}
+.main-banner-content-style-two {
+    h1 {
+        margin-bottom: 20px;
+        font: {
+            size: 60px;
+            weight: 800;
+        };
+    }
+    p {
+        max-width: 580px;
+        line-height: 1.8;
+        font: {
+            weight: 600;
+            size: 16px;
+        };
+    }
+    .default-btn {
+        margin-top: 10px;
+    }
+}
+.bulb {
+    left: 15%;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    
+    img {
+        animation: moveleftbounce 4s linear infinite;
+    }
+}
+
+/*================================================
+About Area CSS
+=================================================*/
+.about-area {
+    .bulb {
+        left: auto;
+        right: 50px;
+        width: 280px;
+    }
+}
+
+/*================================================
+View All Courses Area CSS
+=================================================*/
+.view-all-courses-area-three {
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+
+    .bulb {
+        left: auto;
+        right: 50px;
+    }
+}
+.view-all-courses-content-style-two {
+    .sub-title {
+        display: block;
+        text-transform: uppercase;
+        color: $main-color;
+        margin-bottom: 8px;
+        font: {
+            size: 14px;
+            weight: 600;
+        };
+    }
+    h2 {
+        margin-bottom: 0;
+        font: {
+            size: 36px;
+            weight: 800;
+        };
+    }
+    p {
+        margin-top: 15px;
+    }
+    .default-btn {
+        margin-top: 10px;
+    }
+}
+.view-all-courses-image-style-two {
+    margin-left: 30px;
+}
+
+/*================================================
+Premium Access Area CSS
+=================================================*/
+.premium-access-area-two {
+    z-index: 1;
+    padding-top: 30px;
+    position: relative;
+
+    &::before {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        z-index: -1;
+        height: 35px;
+        position: absolute;
+        background-color: #100f1f;
+    }
+}
+.premium-access-content-style-two {
+    position: relative;
+    top: -20px;
+
+    .sub-title {
+        display: block;
+        text-transform: uppercase;
+        color: $main-color;
+        margin-bottom: 8px;
+        font: {
+            size: 14px;
+            weight: 600;
+        };
+    }
+    h2 {
+        margin-bottom: 15px;
+        font: {
+            size: 36px;
+            weight: 800;
+        };
+    }
+    .default-btn {
+        margin-top: 10px;
+    }
+}
+.premium-access-image-style-two {
+    text-align: center;
+}
+
+/*================================================
+Testimonials Area CSS
+=================================================*/
+.testimonials-slides-two {
+    max-width: 1150px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    &.owl-theme {
+        .owl-nav {
+            margin-top: 0;
+
+            [class*=owl-] {
+                left: -20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0;
+                padding: 0;
+                background-color: $white-color !important;
+                width: 40px;
+                color: $main-color;
+                border: 1px solid $main-color;
+                height: 40px;
+                font-size: 25px !important;
+                transition: $transition;
+                border-radius: 50%;
+
+                i {
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+                &:hover {
+                    background-color: $main-color !important;
+                    color: $white-color;
+                }
+                &.owl-next {
+                    left: auto;
+                    right: -20px;
+                }
+            }
+        }
+    }
+}
+.testimonials-item {
+    z-index: 1;
+    padding: 100px;
+    background-color: #FFF8F8;
+    border-radius: 5px;
+    position: relative;
+
+    p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+    h3 {
+        color: $main-color;
+        margin: {
+            top: 20px;
+            bottom: 0;
+        };
+        font: {
+            size: 20px;
+            weight: 700;
+        };
+    }
+    span {
+        display: block;
+        color: $optional-color;
+        font-size: 15px;
+        margin-top: 4px;
+    }
+    img {
+        display: inline-block !important;
+        width: auto !important;
+        text-align: center;
+    }
+    &::before {
+        opacity: .04;
+        content: "\f10a";
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        line-height: 1;
+        font: {
+            family: Flaticon;
+            size: 200px;
+        };
+        margin: {
+            top: 10px;
+            left: 50px;
+        };
+    }
+}
+
+/*================================================
+Get Instant Courses Area CSS
+=================================================*/
+.get-instant-courses-area-two {
+    position: relative;
+    z-index: 1;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 25px;
+        z-index: -1;
+        background-color: $white-color;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 21px;
+        z-index: -1;
+        background-color: $white-color;
+    }
+    .bulb {
+        left: 20px;
+        width: 180px;
+        bottom: 21px;
+    }
+}
+.get-instant-courses-content-style-two {
+    .sub-title {
+        display: block;
+        color: $main-color;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font: {
+            size: 14px;
+            weight: 600;
+        };
+    }
+    h2 {
+        margin-bottom: 15px;
+        font: {
+            size: 36px;
+            weight: 800;
+        };
+    }
+    p {
+        max-width: 620px;
+        line-height: 1.8;
+    }
+    .default-btn {
+        margin-top: 5px;
+    }
+}
+.get-instant-courses-image-style-two {
+    text-align: right;
+}
+
+/*================================================
+Partner Area CSS
+=================================================*/
+.partner-item {
+    text-align: center;
+
+    img {
+        width: auto !important;
+        display: inline-block !important;
+        transition: $transition;
+        opacity: .60;
+    }
+    &:hover {
+        img {
+            opacity: 1;
+        }
+    }
+}
+
+/*================================================
+Video Area CSS
+=================================================*/
+.video-area {
+    z-index: 1;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        z-index: -1;
+        background-color: #FFF8F8;
+    }
+}
+
+/*================================================
+Funfacts Area CSS
+=================================================*/
+.funfacts-box {
+    background-color: $white-color;
+    border: 1px dashed #AD8360;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    height: 280px;
+    width: 280px;
+    margin: {
+        left: auto;
+        right: auto;
+        bottom: 30px;
+    };
+    h3 {
+        margin-bottom: 8px;
+        color: $main-color;
+        font: {
+            size: 44px;
+            weight: 800;
+        };
+        span {
+            font-size: 48px;
+        }
+        .odometer {
+            position: relative;
+            top: -2px;
+        }
+    }
+    p {
+        text-transform: uppercase;
+        color: $black-color;
+        line-height: 1;
+        font: {
+            weight: 700;
+            size: 16px;
+        };
+    }
+    .content {
+        left: 0;
+        right: 0;
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
     }
 }

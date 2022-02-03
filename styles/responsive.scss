@@ -309,7 +309,6 @@ $value_nine: 1550px;
 
         &.ptb-70 {
             padding-top: 50px;
-            padding-bottom: 50px;
         }
     }
 
@@ -3582,9 +3581,271 @@ $value_nine: 1550px;
 
     .edemy-nav {
         .navbar {
-            .navbar-collapse {
-                overflow-y: auto;
+            .navbar-nav {
+                .nav-item {
+                    .col {
+                        width: 100%;
+                        flex-basis: inherit;
+                    }
+                }
             }
+        }
+    }
+    .td-sidebar {
+        margin-bottom: 30px;
+    }
+    .border-box {
+        padding: 20px;
+    }
+
+    .course-video-list {
+        height: 100%;
+        overflow: auto;
+        margin-bottom: 15px;
+        a {
+            display: table-cell;
+            min-width: 150px;
+            margin-right: 20px;
+            h4 {
+                font-size: 13px;
+            }
+        }
+
+        /* width */
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888; 
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    }
+    .course-video-iframe {
+        margin-top: 20px;
+        video {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    /*new-css*/
+    .main-banner-area {
+        border-top: 1px solid #eeeeee;
+        padding: {
+            top: 60px;
+            bottom: 60px;
+        };
+        .container-fluid {
+            max-width: 100%;
+        }
+    }
+    .main-banner-content-style-two {
+        text-align: center;;
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        p {
+            max-width: 100%;
+            font: {
+                weight: 500;
+                size: 15px;
+            };
+        }
+        .default-btn {
+            margin-top: 5px;
+        }
+    }
+    .main-banner-image-style-two {
+        margin-top: 30px;
+    }
+    .bulb {
+        display: none;
+    }
+
+    .features-box {
+        text-align: center;
+        padding: 20px 15px;
+
+        h3 {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+        .icon {
+            font-size: 40px;
+        }
+        .link-btn {
+            font-size: 14px;
+        }
+    }
+
+    .testimonials-item {
+        padding: 20px 15px;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+        }
+        img {
+            margin-top: 25px;
+        }
+        span {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 17px;
+        }
+        &::before {
+            font-size: 150px;
+            margin: {
+                left: 0;
+                right: 0;
+            };
+        }
+    }
+    .testimonials-slides-two {
+        max-width: 100%;
+
+        &.owl-theme {
+            .owl-nav {
+                margin-top: 30px;
+
+                [class*=owl-] {
+                    top: 0;
+                    left: 0;
+                    transform: translateY(0%);
+                    position: relative;
+                    margin: {
+                        left: 5px;
+                        right: 5px;
+                    };
+                    &.owl-next {
+                        right: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .get-instant-courses-area-two {
+        padding: {
+            top: 60px;
+            bottom: 60px;
+        };
+        &::before, &::after {
+            display: none;
+        }
+    }
+    .get-instant-courses-content-style-two {
+        text-align: center;
+        
+        .sub-title {
+            font-size: 13px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+    }
+    .get-instant-courses-image-style-two {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .partner-area {
+        &.ptb-100 {
+            padding-bottom: 60px;
+        }
+    }
+
+    .funfacts-box {
+        width: auto;
+        height: auto;
+        border: none;
+        background-color: transparent;
+
+        .content {
+            position: relative;
+            transform: unset;
+        }
+        h3 {
+            font-size: 30px;
+            margin-bottom: 5px;
+
+            span {
+                font-size: 35px;
+            }
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .view-all-courses-area-three {
+        padding: {
+            top: 60px;
+            bottom: 60px;
+        };
+    }
+    .view-all-courses-image-style-two {
+        text-align: center;
+        margin: {
+            left: 0;
+            bottom: 30px;
+        };
+    }
+    .view-all-courses-content-style-two {
+        text-align: center;
+        
+        .sub-title {
+            font-size: 13px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .premium-access-area-two {
+        padding: {
+            top: 60px;
+            bottom: 60px;
+        };
+        &::before {
+            display: none;
+        }
+    }
+    .premium-access-content-style-two {
+        text-align: center;
+        top: 0;
+
+        .sub-title {
+            font-size: 12.5px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+    .premium-access-image-style-two {
+        margin-top: 30px;
+    }
+}
+
+/* Min width 576px Max width 767px */
+@media only #{$media} and ($feature_min : $value_one) and ($feature_max : $value_two) {
+    .edemy-nav {
+        .navbar {
             .navbar-nav {
                 .nav-item {
                     .col {
@@ -3595,10 +3856,6 @@ $value_nine: 1550px;
             }
         }
     }
-}
-
-/* Min width 576px Max width 767px */
-@media only #{$media} and ($feature_min : $value_one) and ($feature_max : $value_two) {
 
     .container {
         max-width: 540px;
@@ -3792,6 +4049,12 @@ $value_nine: 1550px;
                 flex: 0 0 33.333333%;
                 max-width: 33.333333%;
             }
+        }
+    }
+    /*new-css*/
+    .main-banner-area {
+        .container-fluid {
+            max-width: 540px;
         }
     }
 
@@ -4002,7 +4265,6 @@ $value_nine: 1550px;
 
         &.ptb-70 {
             padding-top: 80px;
-            padding-bottom: 80px;
         }
     }
 
@@ -5723,6 +5985,214 @@ $value_nine: 1550px;
             }
         }
     }
+ 
+    .course-video-list {
+        height: 100%;
+        overflow: auto;
+        margin-bottom: 15px;
+        a {
+            display: table-cell;
+            min-width: 200px;
+            margin-right: 20px;
+            h4 {
+                font-size: 13px;
+            }
+        }
+
+        /* width */
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888; 
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    }
+    .course-video-iframe {
+        margin-top: 30px;
+        video {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    /*new-css*/
+    .main-banner-area {
+        border-top: 1px solid #eeeeee;
+        padding: {
+            top: 80px;
+            bottom: 80px;
+        };
+        .container-fluid {
+            max-width: 720px;
+        }
+    }
+    .main-banner-content-style-two {
+        text-align: center;
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 37px;
+        }
+        p {
+            margin: 0 auto 10px;
+            max-width: 515px;
+            font-size: 15px;
+        }
+    }
+    .main-banner-image-style-two {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .bulb {
+        display: none;
+    }
+
+    .features-box {
+        padding: 30px;
+
+        h3 {
+            font-size: 19px;
+        }
+    }
+
+    .testimonials-slides-two {
+        max-width: 100%;
+    }
+    .testimonials-item {
+        padding: 50px;
+        text-align: center;
+
+        img {
+            margin-top: 25px;
+        }
+        p {
+            font-size: 16px;
+        }
+        h3 {
+            margin-bottom: 2px;
+            font-size: 18px;
+        }
+        span {
+            font-size: 14px;
+        }
+        &::before {
+            opacity: .03;
+            margin: {
+                left: 0;
+                right: 0;
+            };
+        }
+    }
+
+    .get-instant-courses-area-two {
+        padding: {
+            top: 80px;
+            bottom: 80px;
+        };
+        &::before, &::after {
+            display: none;
+        }
+    }
+    .get-instant-courses-content-style-two {
+        text-align: center;
+
+        .sub-title {
+            font-size: 13.5px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
+    .get-instant-courses-image-style-two {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .funfacts-box {
+        width: auto;
+        height: auto;
+        border: none;
+        background-color: transparent;
+
+        .content {
+            transform: translateY(0);
+            position: relative;
+            top: 0;
+        }
+        h3 {
+            font-size: 36px;
+
+            span {
+                font-size: 40px;
+            }
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .view-all-courses-area-three {
+        padding: {
+            top: 80px;
+            bottom: 80px;
+        };
+    }
+    .view-all-courses-image-style-two {
+        text-align: center;
+        margin: {
+            left: 0;
+            bottom: 30px;
+        };
+    }
+    .view-all-courses-content-style-two {
+        text-align: center;
+
+        .sub-title {
+            font-size: 13.5px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .premium-access-area-two {
+        padding: {
+            top: 80px;
+            bottom: 80px;
+        };
+        &::before {
+            display: none;
+        }
+    }
+    .premium-access-content-style-two {
+        top: 0;
+        text-align: center;
+        
+        .sub-title {
+            font-size: 13.5px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            max-width: 515px;
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+    }
+    .premium-access-image-style-two {
+        margin-top: 30px;
+    }
 }
 
 /* Min width 992px Max width 1199px */
@@ -5743,6 +6213,79 @@ $value_nine: 1550px;
         };
     }
 
+    .edemy-responsive-nav {
+        .logo {
+            width: 25%;
+        }
+        .edemy-responsive-menu {
+            &.mean-container {
+                .mean-nav {
+                    margin-top: 51px;
+
+                    ul {
+                        font-size: 16px;
+
+                        li {
+                            li {
+                                a {
+                                    font-size: 15.5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .navbar-nav {
+                    overflow-y: scroll;
+                    height: 325px;
+                }
+                .mean-nav {
+                    margin-top: 50px;
+                }
+                .search-box {
+                    display: block !important;
+                }
+                .others-option {
+                    display: flex !important;
+                }
+                .navbar-nav {
+                    .nav-item {
+                        &.megamenu {
+                            .dropdown-menu {
+                                .nav-item {
+                                    .row {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        max-width: 83%;
+                                        margin: {
+                                            left: auto;
+                                            right: auto;
+                                        };
+                                        .col {
+                                            flex-basis: 0;
+                                            flex-grow: 1;
+                                            max-width: 100%;
+                                        }
+                                        &:nth-child(2) {
+                                            max-width: 100%;
+                                        }
+                                    }
+                                }
+                                .megamenu-submenu {
+                                    width: 100%;
+
+                                    li {
+                                        a {
+                                            font-size: 15.5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .navbar-area {
         padding: {
             top: 25px;
@@ -6004,7 +6547,7 @@ $value_nine: 1550px;
         padding: 60px 15px 30px;
 
         h3 {
-            font-size: 19px;
+            font-size: 20px;
         }
     }
 
@@ -7001,6 +7544,7 @@ $value_nine: 1550px;
                     &:hover {
                         .dropdown-menu {
                             margin-top: 0;
+                            width: 250px;
                             li {
                                 a {
                                     font-size: 14px;
@@ -7039,6 +7583,7 @@ $value_nine: 1550px;
             .search-box {
                 margin-left: 30px;
                 width: 160px;
+                display: none;
                 .input-search {
                     height: 40px;
                     font-size: 12px;
@@ -7055,29 +7600,57 @@ $value_nine: 1550px;
                 }
                 .default-btn {
                     font-size: 13px;
-                    padding-left: 15px;
+                    padding-left: 40px;
                     padding-right: 15px;
                     i {
-                        display: none;
+                        left: 20px;
                     }
                 }
             }
         }
     }
-    .blog-slides {
-        .single-blog-post-box {
-            .post-content {
-                .post-content-footer {
-                    li {
-                        font-size: 12px;
-                        .post-author {
-                            span {
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                }
-            }
+    /*new-css*/
+    .main-banner-area {
+        .container-fluid {
+            max-width: 960px;
+        }
+    }
+    .main-banner-content-style-two {
+        h1 {
+            font-size: 45px;
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .bulb {
+        display: none;
+    }
+
+    .funfacts-box {
+        height: 215px;
+        width: 215px;
+    }
+
+    .testimonials-item {
+        padding: 70px;
+    }
+
+    .get-instant-courses-content-style-two {
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .view-all-courses-content-style-two {
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    .premium-access-content-style-two {
+        h2 {
+            font-size: 30px;
         }
     }
 }
@@ -7099,19 +7672,13 @@ $value_nine: 1550px;
         }
         .navbar {
             .search-box {
-                width: 200px;
+                display: none;
             }
             .others-option {
-                .option-item {
-                    margin-left: 20px;
-                }
+                display: flex !important;
             }
             .navbar-nav {
                 .nav-item {
-                    a {
-                        margin-left: 11px;
-                        margin-right: 11px;
-                    }
                     .dropdown-menu {
                         left: auto;
                         right: 0;
@@ -7123,23 +7690,23 @@ $value_nine: 1550px;
                                 
                                 li {
                                     .dropdown-menu {
-                                        left: 100%;
+                                        left: 250px;
             
                                         li {
                                             .dropdown-menu {
-                                                left: -100%;
+                                                left: -250px;
                     
                                                 li {
                                                     .dropdown-menu {
-                                                        left: 100%;
+                                                        left: 250px;
                             
                                                         li {
                                                             .dropdown-menu {
-                                                                left: -100%;
+                                                                left: -250px;
                                     
                                                                 li {
                                                                     .dropdown-menu {
-                                                                        left: 100%;
+                                                                        left: 250px;
                                                                     }
                                                                 }
                                                             }
@@ -7388,6 +7955,22 @@ $value_nine: 1550px;
         }
     }
 
+    .admin-nav {
+        .navbar {
+            .others-option {
+                display: flex !important;
+            }
+        }
+    }
+    /*new-css*/
+    .testimonials-slides-two {
+        max-width: 1050px;
+    }
+
+    .funfacts-box {
+        width: 260px;
+        height: 260px;
+    }
 }
 
 /* Min width 1550px */
@@ -7499,54 +8082,37 @@ $value_nine: 1550px;
             }
         }
     }
-
-}
-
-@media only screen and (max-width : 575px) {
-    .edemy-nav {
-        .navbar {
-            .navbar-nav {
-                .nav-item {
-                    .col {
-                        width: 100%;
-                        margin-bottom: 10px;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-            .others-option {   
-                right: 65px !important;  
-                .option-item {
-                    margin-left: 15px;
-                    .default-btn {
-                        font-size: 11px;
-                        padding-left: 12px;
-                        padding-right: 12px;
-                        i {
-                            display: none;
-                        }
-                    }
-                }        
-            }
+    /*new-css*/
+    .main-banner-area {
+        .container-fluid {
+            max-width: 1480px;
         }
     }
+    .bulb {
+        left: 20%;
+    }
+
+    .about-area {
+        .bulb {
+            width: auto;
+        }
+    }
+
+    .get-instant-courses-area-two {
+        .bulb {
+            width: auto;
+        }
+    }
+
 }
 
 @media only screen and (max-width : 991px) {
     .edemy-nav {
         .container-fluid {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         .navbar {
-            .navbar-toggler {
-                &:focus {
-                    outline: 0;
-                    box-shadow: none;
-                }
-            }
             .search-box {
                 margin-left: 0;
                 margin-top: 0;
@@ -7561,7 +8127,7 @@ $value_nine: 1550px;
                 max-height: 70vh;
                 overflow-y: scroll;
                 margin-top: 20px;
-                padding-right: 20px;
+                padding-right: 15px;
 
                 &::-webkit-scrollbar {
                     width: 10px;
@@ -7576,7 +8142,6 @@ $value_nine: 1550px;
                     background: #555; 
                 }
             }
-                
             .navbar-nav {
                 .nav-item {
                     a {
@@ -7591,7 +8156,6 @@ $value_nine: 1550px;
                             display: none;
                         }
                     }
-                     
                     .dropdown-menu {
                         border: none;
                         top: 0;
@@ -7602,7 +8166,8 @@ $value_nine: 1550px;
                         margin-top: 0;
                         width: 100%;
                         border-left: 1px solid #eee;
-                        margin-bottom: 10px;
+                        border-right: 1px solid #eee;
+                        border-bottom: 1px solid #eee;
 
                         li {
                             a {
@@ -7618,8 +8183,7 @@ $value_nine: 1550px;
                                 opacity: 1;
                                 visibility: visible;
                                 margin-top: 0;
-                                width: 88%;
-                                margin-bottom: 10px;
+                                width: 90%;
                             }
                         }
                     }
@@ -7637,6 +8201,8 @@ $value_nine: 1550px;
                             margin-top: 0;
                             width: 100%;
                             border-left: 1px solid #eee;
+                            border-right: 1px solid #eee;
+                            border-bottom: 1px solid #eee;
 
                             .megamenu-submenu {
                                 li {
@@ -7652,14 +8218,54 @@ $value_nine: 1550px;
                             }
                         }
                     }
+
+                    .col {
+                        margin-bottom: 10px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
-
             .others-option {
                 margin-left: 0;
                 position: absolute;
                 top: 15px;
-                right: 70px;         
+                right: 60px;
+
+                .option-item {
+                    margin-left: 20px;
+                    .default-btn {
+                        padding: 8px 12px;
+                        font-size: 11px;
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .admin-nav {
+        .navbar {
+            .others-option {
+                .user-dropdown {
+                    .dropdown-menu {
+                        opacity: 1;
+                        visibility: visible;
+                        left: 0;
+                        right: auto;
+                        top: 32px;
+                        width: 210px;
+                        li {
+                            a {
+                                padding: 6px 20px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,16 +1,13 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
-import PageBanner from '../components/SingleCourses/PageBanner';
-import CoursesDetailsSidebar from '../components/SingleCourses/CoursesDetailsSidebar';
-import YouMightLikeTheCourses from '../components/Courses/YouMightLikeTheCourses';
-import Footer from '../components/_App/Footer';
+import PageBanner from '@/components/SingleCourses/PageBanner';
+import StaticCoursesDetailsSidebar from '@/components/SingleCourses/StaticCoursesDetailsSidebar';
+import YouMightLikeTheCourses from '@/components/Courses/YouMightLikeTheCourses';
 import { resetIdCounter, Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 resetIdCounter();
 
 const SingleCourses = () => {
     return (
         <React.Fragment>
-            <Navbar />
             <PageBanner 
                 pageTitle="Python for Finance: Investment Fundamentals & Data Analytics" 
                 homePageUrl="/" 
@@ -332,15 +329,13 @@ const SingleCourses = () => {
                         </div>
 
                         <div className="col-lg-4 col-md-12">
-                            <CoursesDetailsSidebar />
+                            <StaticCoursesDetailsSidebar />
                         </div>
                     </div>
                 </div>
             </div>
 
             <YouMightLikeTheCourses />
-
-            <Footer />
         </React.Fragment>
     )
 }

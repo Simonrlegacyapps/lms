@@ -1,13 +1,10 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import Link from 'next/link';
-import Footer from '../components/_App/Footer';
 
 const Blog1 = () => {
     return (
         <React.Fragment>
-            <Navbar />
             <PageBanner 
                 pageTitle="Blog Grid (2 in Row)" 
                 homePageUrl="/" 
@@ -235,7 +232,6 @@ const Blog1 = () => {
                 </div>
             </div>
     
-            <Footer />
         </React.Fragment>
     )
 }

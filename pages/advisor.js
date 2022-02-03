@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../components/_App/Navbar';
+// import Navbar from '../components/_App/Navbar';
 import PageBanner from '../components/Common/PageBanner';
 import PremiumAccessTwo from '../components/Common/PremiumAccessTwo';
-import Footer from '../components/_App/Footer';
+// import Footer from '../components/_App/Footer';
 import Link from 'next/link';
 
 const Advisor = () => {
     return (
         <React.Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <PageBanner 
                 pageTitle="Advisor" 
                 homePageUrl="/" 
@@ -170,7 +170,7 @@ const Advisor = () => {
                 <PremiumAccessTwo />
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

@@ -1,56 +1,71 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-const MySwal = withReactContent(Swal)
-import baseUrl from '../../utils/baseUrl';
+import { parseCookies } from 'nookies'
+import { Spinner, Alert } from 'reactstrap'
+import axios from 'axios'
+import { useToasts } from 'react-toast-notifications'
+import catchErrors from '@/utils/catchErrors'
+import baseUrl from '@/utils/baseUrl'
 
-const alertContent = () => {
-    MySwal.fire({
-        title: 'Congratulations!',
-        text: 'Your message was successfully send and will back to you soon',
-        icon: 'success',
-        timer: 2000,
-        timerProgressBar: true,
-        showConfirmButton: false,
-    })
-}
+const RegisterForm = ({ user }) => {
+    const { token } = parseCookies()
+    const { addToast } = useToasts()
 
-// Form initial state
-const INITIAL_STATE = {
-    name: "",
-    email: "",
-    number: "",
-    subject: "",
-    text: ""
-};
-
-const RegisterForm = () => {
-
-    const [contact, setContact] = useState(INITIAL_STATE);
-    const { register, handleSubmit, errors } = useForm();
-
-    const handleChange = e => {
-        const { name, value } = e.target;
-        setContact(prevState => ({ ...prevState, [name]: value }));
-        console.log(contact)
+    const INIT_APPLY = {
+        name: user.name,
+        email: user.email,
+        number: user.phone,
+        subject: "Becaome A Teacher!",
+        as_teacher_apply: true,
+        as_teacher_req_desc: '',
     }
 
-    const onSubmit = async e => {
-        // e.preventDefault();
+    const [apply, setApply] = React.useState(INIT_APPLY)
+    const [initApply, setInitApply] = React.useState(false)
+    const [loading, setLoading] = React.useState(false)
+    const [disabled, setDisabled] = React.useState(true)
+    const [error, setError] = React.useState('')
+    const { register, handleSubmit, errors } = useForm();
+
+    React.useEffect(() => {
+        const isApply = Object.values(apply).every(el => Boolean(el))
+        isApply ? setDisabled(false) : setDisabled(true)
+    }, [apply])
+
+    const handleChange = e => {
+        // console.log(d.value)
+        const { name, value } = e.target
+        setApply(prevState => ({ ...prevState, [name]: value }))
+        // console.log(apply);
+    }
+
+    const handleApply = async () => {
+        // e.preventDefault()
         try {
-            const url = `${baseUrl}/api/contact`;
-            const { name, email, number, subject, text } = contact;
-            const payload = { name, email, number, subject, text };
-            await axios.post(url, payload);
-            console.log(url);
-            setContact(INITIAL_STATE);
-            alertContent();
+            setLoading(true)
+            setError('')
+            const url = `${baseUrl}/api/v1/user/apply`
+            const payload = {...apply}
+            const response = await axios.post(url, payload, {
+                headers: {Authorization: token}
+            })
+
+            addToast(response.data, { 
+                appearance: 'success'
+            })
+
+            setApply(INIT_APPLY)
+            setInitApply(true)
         } catch (error) {
-            console.log(error)
+            catchErrors(error, setError)
+        } finally {
+            setLoading(false);
         }
-    };
+    }
+
+    const isApplied = user && user.as_teacher_apply === true && user.as_teacher_confirmed === null
+    const isTeacher = user && user.as_teacher_apply === true && user.as_teacher_confirmed === true
+    const isCancelled = user && user.as_teacher_apply === true && user.as_teacher_confirmed === false
 
     return (
         <div className="teacher-register-area ptb-100">
@@ -59,7 +74,23 @@ const RegisterForm = () => {
                     <h2>Register to Become an Intructor</h2>
                     <p>Your email address will not be published. Required fields are marked *</p>
 
-                    <form id="contactForm" onSubmit={handleSubmit(onSubmit)}>
+                    {isApplied && (
+                        <Alert color="info mt-15">
+                            Your application is pending now, you will get notice soon.
+                        </Alert>
+                    )}
+                    {isTeacher && (
+                        <Alert color="success mt-15">
+                            You already a teacher & create much exciting content.
+                        </Alert>
+                    )}
+                    {isCancelled && (
+                        <Alert color="success mt-15">
+                            You already applied & you got cancellation.
+                        </Alert>
+                    )}
+
+                    <form id="contactForm" onSubmit={handleSubmit(handleApply)}>
                         <div className="row">
                             <div className="col-lg-6 col-md-6">
                                 <div className="form-group">
@@ -67,13 +98,9 @@ const RegisterForm = () => {
                                         type="text" 
                                         name="name" 
                                         placeholder="Your Name" 
-                                        value={contact.name}
+                                        value={apply.name}
                                         onChange={handleChange}
-                                        ref={register({ required: true })}
                                     />
-                                    <div className='invalid-feedback' style={{display: 'block'}}>
-                                        {errors.name && 'Name is required.'}
-                                    </div>
                                 </div>
                             </div>
 
@@ -83,13 +110,9 @@ const RegisterForm = () => {
                                         type="text" 
                                         name="email" 
                                         placeholder="Your email address" 
-                                        value={contact.email}
+                                        value={apply.email}
                                         onChange={handleChange}
-                                        ref={register({ required: true, pattern: /^\S+@\S+$/i })}
                                     />
-                                    <div className='invalid-feedback' style={{display: 'block'}}>
-                                        {errors.email && 'Email is required.'}
-                                    </div>
                                 </div>
                             </div>
 
@@ -99,13 +122,9 @@ const RegisterForm = () => {
                                         type="text" 
                                         name="number" 
                                         placeholder="Your phone number" 
-                                        value={contact.number}
+                                        value={apply.number}
                                         onChange={handleChange}
-                                        ref={register({ required: true })}
                                     />
-                                    <div className='invalid-feedback' style={{display: 'block'}}>
-                                        {errors.number && 'Number is required.'}
-                                    </div>
                                 </div>
                             </div>
 
@@ -115,13 +134,9 @@ const RegisterForm = () => {
                                         type="text" 
                                         name="subject" 
                                         placeholder="Your Subject" 
-                                        value={contact.subject}
+                                        value={apply.subject}
                                         onChange={handleChange}
-                                        ref={register({ required: true })}
                                     />
-                                    <div className='invalid-feedback' style={{display: 'block'}}>
-                                        {errors.subject && 'Subject is required.'}
-                                    </div>
                                 </div>
                             </div>
 
@@ -131,19 +146,32 @@ const RegisterForm = () => {
                                         name="text" 
                                         cols="30" 
                                         rows="5" 
-                                        placeholder="Write your message..." 
-                                        value={contact.text}
+                                        placeholder="Please tell us about your teaching profession" 
+                                        className="form-control" 
+                                        name="as_teacher_req_desc"
+                                        value={apply.as_teacher_req_desc}
                                         onChange={handleChange}
                                         ref={register({ required: true })}
                                     />
                                     <div className='invalid-feedback' style={{display: 'block'}}>
-                                        {errors.text && 'Text body is required.'}
+                                        {errors.text && 'Details is required.'}
                                     </div>
                                 </div>
                             </div>
         
                             <div className="col-lg-12 col-sm-12">
-                                <button type="submit" className="default-btn">Send Message</button>
+                            {!(initApply || isApplied || isTeacher || isCancelled) && (
+                                <div className="text-right">
+                                    <button
+                                        disabled={disabled || loading} 
+                                        type="submit"
+                                        className="default-btn"
+                                    >
+                                        Apply Now
+                                        {loading ? <Spinner color="success" /> : ''}
+                                    </button>
+                                </div>
+                            )}
                             </div>
                         </div>
                     </form>
