@@ -36,7 +36,7 @@ const Layout = ({ children, user }) => {
     return(
         <React.Fragment>
             <Head>
-                <title>eDemy - React Next.js Education LMS Template</title>
+                <title>TransformUS</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="eDemy - React Next.js Education LMS Template" />
                 <meta name="og:title" property="og:title" content="eDemy - React Next.js Education LMS Template"></meta>
