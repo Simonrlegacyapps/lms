@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-const APP_NAME = 'TransformUS'
+const APP_NAME = 'TransformUs'
 
 class MyDocument extends Document {
     render() {
